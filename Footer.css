@@ -1,0 +1,96 @@
+.footer {
+    padding: 60px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #141414; /* typical Netflix dark footer color */
+    color: #b3b3b3; /* Light gray text */
+    justify-content: center;
+    animation: fade-in 1s ease forwards;
+}
+
+.footer-list-items {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-list-items ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    list-style: none;
+    row-gap: 15px;
+    column-gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list-items ul li {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.allButtons {
+    display: flex;
+    gap: 15px;
+}
+
+.allButtons button {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.allButtons button:nth-child(1) {
+    color: #3b5998;
+}
+
+.allButtons button:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 14px;
+    color: rgb(247, 43, 43);
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .footer-list-items {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .footer-list-items ul {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .footer-items {
+        align-items: center;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,189 @@
+.title-cards {
+    margin-top: 10px;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 65px;
+    animation: fade-in ease 1s forwards;
+}
+
+.title-cards h2 {
+    padding: 10px 0px;
+}
+
+.card-list {
+    display: flex;
+    overflow-x: hidden;
+    gap: 10px;
+}
+
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.card img {
+    width: 260px;
+    height: 152px;
+}
+
+.card .pop-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    height:57px;
+    top:98px;
+    bottom: 0px;
+    text-align: center;
+    display: none;
+}
+
+.card .pop-up img {
+    width: 20px;
+    background: #fff;
+}
+
+.card .pop-up button {
+    border: 0;
+    outline: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card .pop-up button:nth-child(1) {
+    background: #fff;
+    color: black;
+}
+
+.card .pop-up button:hover {
+    border: 2px solid red;
+}
+
+@keyframes signoutAnime {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover .pop-up{
+   display: flex;
+   animation: signoutAnime 0.3s ease forwards;
+   z-index: 1;
+}
+
+.back-arrow, .front-arrow {
+    width: 65px;
+    height: 152px;
+    position: absolute;
+    top: 106px; /* Center vertically */
+    transform: translateY(-50%);
+    font-size: 2rem; /* Adjust icon size */
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.835); /* Adjust color to match your design */
+    z-index: 10; /* Ensure arrows are in front */
+    font-size: 80px;
+    font-weight:lighter;
+    margin-top: 27px;
+}
+
+.back-arrow {
+    left: 0px;
+    background: rgba(0, 0, 0, 0.8);
+}
+  
+.front-arrow {
+    right: 0px;
+    background: rgba(0, 0, 0, 0.515);
+}
+
+.card .card-title {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .title-cards {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .title-cards h2 {
+        font-size: 20px;
+        margin-left: -40px;
+    }
+    .card-list img {
+        width: 200px;
+        height: auto;
+    }
+    .card-list .card p {
+        font-size: 18px;
+    }
+    .back-arrow, .front-arrow {
+        display: none;
+    }
+    .card-list {
+        margin-left: -40px;
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 800px) {
+    .title-cards h2 {
+        font-size: 15px;
+        margin-left: -40px;
+    }
+    .card-list img {
+        width: 180px;
+        height: auto;
+    }
+    .card-list .card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-cards h2 {
+        font-size: 12px;
+        margin-left: -40px;
+    }
+    .card-list img {
+        width: 120px;
+        height: auto;
+    }
+    .card-list .card p {
+        font-size: 10px;
+    }
+}

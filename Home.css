@@ -1,0 +1,110 @@
+.home .hero {
+    width: 100%;
+    position: relative;
+    animation: fade-in 2s ease forwards;
+}
+
+.home .hero .banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, transparent, black 65%);
+    --webwit--mask-image: linear-gradient(toRight, transparent, black, 75%);
+}
+
+.hero-caption {
+    position: absolute;
+    bottom: 50px;
+    padding: 10px 90px;
+}
+
+.hero-caption .caption-img {
+    width: 350px;
+}
+
+.hero-caption p {
+    padding: 20px 0px;
+    width: 500px;
+}
+
+.caption-btns  {
+    display: flex;
+    gap: 10px;
+}
+
+.caption-btns img {
+    width: 25px;
+}
+
+.caption-btns .play-icon {
+    border: 0;
+    outline: 0;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap:5px;
+    font-size: 15px;
+    font-weight: 600;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.caption-btns .play-icon.more-info {
+    background: #6d6d6eb3;
+    color: #fff
+}
+
+.caption-btns .play-icon:hover {
+    background: #ffffffbf;
+}
+
+.caption-btns .play-icon.more-info:hover {
+    background: #6d6d6e66;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero-caption {
+        padding-left: 35px;
+    }
+    .hero-caption img {
+        margin-bottom: 10px;
+        width: 250px;
+    }
+    .hero-caption p {
+        font-size: 12px;
+        margin-bottom: 10px;
+        width: 50%;
+    }
+    .caption-btns img {
+      width: 20px;
+    }
+}
+
+@media (max-width: 650px) {  
+    .hero-caption .caption-img{
+       display: none;
+    }
+    .hero-caption {
+        position: absolute;
+        bottom: 50px;
+        padding: 0px 30px;
+    }
+    .hero-caption p {
+        width: 75%;
+    }
+    .hero-caption .play-icon {
+        padding: 4px 10px;
+        gap: 5px;
+        font-size: 10px;
+    }
+}
